@@ -5,211 +5,119 @@ This document stores reusable research knowledge from my LLM-based multi-agent r
 It is not a paper note file.  
 It is a semi-structured and expandable knowledge collection.
 
-Principle:
-
-> Capture first, organize gradually.
-
-The structure below is temporary and can be revised as my understanding of the field improves.
-
 ---
 
-## 0. Current Knowledge Buckets
+### E001 - Communication Taxonomy in LLM-MAS
 
-These buckets are not fixed.  
-They are only used to make the current knowledge easier to browse.
+**Primary Bucket:** LLM-based Multi-Agent Systems — Communication Taxonomy
 
----
+**Date:** 17/5/2026
 
-### 0.1 Field-Level Understanding
-
-For high-level consensus, field structure, mainstream directions, historical shifts, or general judgments about the area.
-
-Related entries:
-
-- 
-
----
-
-### 0.2 Methods / Tricks / Design Patterns
-
-For reusable methods, experimental tricks, prompting patterns, agent interaction designs, training strategies, or implementation choices.
-
-Related entries:
-
-- 
-
----
-
-### 0.3 Evaluation / Benchmark Issues
-
-For problems related to evaluation quality, baseline design, benchmark contamination, metrics, ablation, or experimental rigor.
-
-Related entries:
-
-- 
-
----
-
-### 0.4 Open Problems / Research Gaps
-
-For unsolved problems, weakly explored questions, unclear mechanisms, or research opportunities.
-
-Related entries:
-
-- 
-
----
-
-### 0.5 Personal Research Ideas
-
-For my own possible project ideas, experiment designs, hypotheses, or proposal fragments.
-
-Related entries:
-
-- 
-
----
-
-### 0.6 Useful Comparisons
-
-For comparing two methods, two papers, two assumptions, two research directions, or two experimental designs.
-
-Related entries:
-
-- 
-
----
-
-### 0.7 Miscellaneous but Potentially Useful
-
-For knowledge that feels important but does not yet fit into existing buckets.
-
-Related entries:
-
-- 
-
----
-
-## 1. Knowledge Entries
-
-Each entry should be short, searchable, and reusable.
-
-Entry rules:
-
-- One entry should capture one knowledge unit.
-- Do not force a perfect category.
-- Use keywords generously.
-- Link to Paper IDs when possible.
-- If unsure, put it under Miscellaneous first.
-- Preserve Entry IDs when reorganizing this document later.
-
----
-
-### E001 - [Short Title]
-
-**Primary Bucket:**  
-**Possible Secondary Buckets:**  
-**Date:**  
 **Source:**  
-**Related Papers:**  
+Paper 2 — *Beyond Self-Talk: A Communication-Centric Survey of LLM-Based Multi-Agent Systems*
+
+
 **Keywords:**  
+LLM-MAS, communication architecture, communication goal, communication protocol, communication strategy, communication paradigm, communication object, communication content, multi-agent coordination, natural language communication, implicit communication, blackboard, message passing
 
 **Content:**  
 
-**Why it matters:**  
+Paper 2 describes communication in LLM-based multi-agent systems through seven aspects:
 
-**Possible future use:**  
+1. **Architecture**  
+   Architecture describes how agents are organized at the system level and how information can flow among them.
+
+   Main categories:
+   - Flat architecture
+   - Hierarchical architecture
+   - Team architecture
+   - Society architecture
+   - Hybrid architecture
+
+   Accurate understanding:  
+   Architecture is about the overall structure or topology of the agent system. It answers who can communicate with whom and how agents are arranged. It should not be confused with communication strategy, which describes the runtime order or procedure of communication.
+
+2. **Goal**  
+   Goal describes why agents communicate.
+
+   Main categories:
+   - Cooperation
+   - Competition
+   - Mixed goal
+
+   Accurate understanding:  
+   Communication design should depend on the task goal. Cooperative tasks favor information sharing and joint planning, while competitive tasks may involve debate, persuasion, negotiation, or strategic information control. Mixed settings may combine both.
+
+3. **Protocol**  
+   Protocol describes the rules, interfaces, or standards that govern communication.
+
+   Main categories:
+   - Model Context Protocol
+   - Agent-to-Agent Protocol
+   - Agent Network Protocol
+
+   Accurate understanding:  
+   Protocol is more infrastructure-oriented. It specifies how messages, context, capabilities, tools, or requests are formatted and exchanged. It is different from architecture: architecture describes system organization, while protocol describes communication rules and interfaces.
+
+4. **Strategy**  
+   Strategy describes the runtime procedure or temporal pattern of communication.
+
+   Main categories:
+   - One-by-one
+   - Simultaneous-talk
+   - Simultaneous-talk-with-summarizer
+
+   Accurate understanding:  
+   Strategy answers how communication unfolds during execution. For example, agents may speak sequentially, generate responses independently in parallel, or speak simultaneously and then be summarized by another component. Strategy is constrained by architecture but not identical to it.
+
+5. **Paradigm**  
+   Paradigm describes the fundamental communication mechanism.
+
+   Main categories:
+   - Message passing
+   - Speech act
+   - Blackboard
+
+   Accurate understanding:  
+   Paradigm is more abstract than strategy. Message passing means agents directly send messages to each other. Speech act emphasizes the function of utterances, such as requesting, proposing, criticizing, or commanding. Blackboard means agents interact through a shared workspace or shared information pool.
+
+6. **Object**  
+   Object describes the target of communication.
+
+   Main categories:
+   - Self
+   - Other agents
+   - Environment
+   - Human
+
+   Accurate understanding:  
+   Communication is not limited to agent-agent dialogue. An agent may communicate with itself through reflection, with other agents through messages, with the environment through action-feedback loops, or with humans through feedback and intervention. This aspect is closely related to capability acquisition and human-in-the-loop systems.
+
+7. **Content**  
+   Content describes what kind of information is exchanged.
+
+   Main categories:
+   - Explicit communication
+     - Natural language
+     - Code and structured data
+   - Implicit communication
+     - Behavioral feedback
+     - Environmental signal
+
+   Accurate understanding:  
+   Natural language is still the dominant form of explicit communication in many LLM-MAS systems, but it is not the only form. Code, structured data, tool outputs, execution traces, environmental feedback, and behavioral signals are also important. Multimodal communication is an emerging extension rather than the default mainstream form.
+
+These seven aspects should not be treated as fully independent dimensions. Some combinations are more natural than others. For example, hierarchical architecture usually supports local simultaneous communication within the same layer, but cross-layer communication often becomes sequential, summarized, or control-oriented. Therefore, communication design in LLM-MAS should be understood as a constrained design space rather than a free combination of independent variables.
 
 ---
 
 ### E002 - [Short Title]
 
-**Primary Bucket:**  
-**Possible Secondary Buckets:**  
 **Date:**  
 **Source:**  
-**Related Papers:**  
 **Keywords:**  
 
 **Content:**  
 
-**Why it matters:**  
-
-**Possible future use:**  
 
 ---
-
-### E003 - [Short Title]
-
-**Primary Bucket:**  
-**Possible Secondary Buckets:**  
-**Date:**  
-**Source:**  
-**Related Papers:**  
-**Keywords:**  
-
-**Content:**  
-
-**Why it matters:**  
-
-**Possible future use:**  
-
----
-
-## 2. Reorganization Notes
-
-Use this section when I notice that the current buckets are no longer enough.
-
----
-
-### 2.1 Possible New Buckets
-
-- 
-
----
-
-### 2.2 Buckets That May Need Splitting
-
-- 
-
----
-
-### 2.3 Buckets That May Need Merging
-
-- 
-
----
-
-### 2.4 Entries That Need Reclassification
-
-- 
-
----
-
-## 3. AI Reorganization Prompt
-
-When this file becomes too long or messy, use the following prompt to ask AI to reorganize it.
-
-```text
-You are helping me reorganize my research Knowledge_Inbox.md.
-
-Context:
-I am a first-year CS student preparing for a summer research internship. My current focus is LLM-based multi-agent systems, agent memory, evaluation, and RL-for-LLM-agents.
-
-I will provide a semi-structured Knowledge_Inbox.md containing raw research knowledge entries.
-
-Your tasks:
-1. Summarize the major knowledge themes currently appearing in the file.
-2. Identify whether the current buckets are still appropriate.
-3. Suggest new buckets if necessary.
-4. Identify buckets that should be split or merged.
-5. Classify each entry into a better structure, but preserve all Entry IDs.
-6. Mark entries that may support a summer research proposal, reproduction project, or cold email discussion.
-7. Do not force uncertain entries into a category. Keep them as miscellaneous if needed.
-8. Return a cleaner Knowledge_Map.md structure that I can copy and use.
-
-Important rules:
-- Do not delete any Entry ID.
-- Do not invent papers not present in my Paper_Index.csv.
-- If a connection is speculative, label it as speculative.
-- Prioritize usefulness for LLM-based multi-agent research preparation.

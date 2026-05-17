@@ -23,3 +23,5 @@ Rule:
 - [2026-05-16] **How is capabilities acquisition implemented in LLM-based multi-agent systems if the model parameters are usually fixed?**  
   My current guess is that since the parameters of LLMs are not easily changed during multi-agent interaction, capabilities acquisition may mainly happen through prompt design, role assignment, tool use, memory, retrieval, external feedback, or coordination among agents rather than direct parameter updates. I need to verify whether this understanding is correct.
 ---
+- [2026-05-17] **Does Paper 2’s communication taxonomy cover all effective communication designs in current LLM-MAS research?**  
+  Paper 2 describes communication in LLM-based multi-agent systems through seven aspects: architecture, goal, protocol, strategy, paradigm, object, and content. I want to clarify whether this taxonomy covers all effective communication designs, or whether there are other important mechanisms not captured by these categories, such as adaptive topology, memory sharing, communication cost control, uncertainty expression, tool-mediated communication, or evaluation-driven communication optimization.
