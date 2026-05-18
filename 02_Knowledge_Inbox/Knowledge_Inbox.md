@@ -111,13 +111,22 @@ These seven aspects should not be treated as fully independent dimensions. Some 
 
 ---
 
-### E002 - [Short Title]
-
-**Date:**  
 **Source:**  
+Paper 3 — *Survey on Evaluation of LLM-based Agents*
+
 **Keywords:**  
+cost-efficiency, safety, robustness, fine-grained evaluation, scalable evaluation, benchmark limitation, process-level evaluation, agent reliability, communication cost, fair baseline
 
 **Content:**  
 
+Key discussion points from Paper 3:
+
+- **Cost-efficiency:** final performance should be considered together with token cost, API calls, tool calls, and inference budget.
+- **Safety:** agent evaluation should consider unsafe intermediate actions, not only final answers.
+- **Robustness:** agents should remain stable across prompts, tasks, environments, and repeated runs.
+- **Fine-grained evaluation:** final task success is insufficient; evaluation should inspect planning, tool use, memory, reflection, and interaction process.
+- **Scalable evaluation:** evaluation methods must handle long-horizon tasks, dynamic environments, and complex workflows.
+- **Benchmark limitations:** many benchmarks are static, final-answer-oriented, or too narrow to capture real agent behavior.
+- **LLM-MAS implication:** multi-agent systems need evaluation of communication quality, coordination quality, cost, robustness, and fair baselines.
 
 ---
