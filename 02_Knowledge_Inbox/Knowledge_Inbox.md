@@ -130,3 +130,45 @@ Key discussion points from Paper 3:
 - **LLM-MAS implication:** multi-agent systems need evaluation of communication quality, coordination quality, cost, robustness, and fair baselines.
 
 ---
+**Short Title:** Open Problems in Autonomous LLM Agent Memory
+
+**Date:** 19/5/2026
+
+**Source:**  
+Paper — *Memory for Autonomous LLM Agents: Mechanisms, Evaluation, and Emerging Frontiers*, Section 9 Open Challenges
+
+
+**Content:**  
+
+Section 9 lists the main open problems for autonomous LLM agent memory:
+
+- **Principled consolidation:**  
+  How to decide what should be kept, compressed, promoted to long-term memory, or discarded. Current systems risk either storing too much noise or forgetting rare but important facts.
+
+- **Causally grounded retrieval:**  
+  Current retrieval often relies on semantic similarity, but useful memories may be causally relevant even when they are semantically distant. Future systems may need causal links, temporal structure, and counterfactual relevance.
+
+- **Trustworthy reflection:**  
+  Reflective memory can reinforce wrong conclusions. Agents need validation, uncertainty estimation, contradiction checking, adversarial probing, and expiration policies for reflected lessons.
+
+- **Learning to forget:**  
+  Forgetting should be selective and purposeful, not just time-based deletion or storage-limit eviction. It matters for robustness, privacy, efficiency, and safety.
+
+- **Multimodal and embodied memory:**  
+  Agents in robotics, games, or mixed-reality settings need memory over text, vision, audio, spatial states, tool states, and embodied experience.
+
+- **Multi-agent memory governance:**  
+  Multi-agent systems need rules for shared memory, access control, concurrent writes, consensus, memory merging, and knowledge transfer between specialized agents.
+
+- **Memory-efficient architectures:**  
+  Memory-augmented agents can be expensive because of long contexts, repeated retrieval, and growing memory stores. Future systems need cheaper retrieval, compression, sparse access, or memory-native architectures.
+
+- **Deeper neuroscience integration:**  
+  Current systems borrow cognitive labels superficially. More useful mechanisms may come from spreading activation, reconsolidation, forgetting curves, and spaced repetition.
+
+- **Foundation models for memory management:**  
+  A long-term direction is training general memory controllers that can decide when to write, retrieve, summarize, forget, and consolidate across many tasks.
+
+- **Standardized evaluation:**  
+  The field lacks shared evaluation protocols and leaderboards for agent memory. Current benchmarks use different datasets, metrics, and settings, making comparisons unreliable.
+---
